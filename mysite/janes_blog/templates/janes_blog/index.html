@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>My blog</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        <header>
+            <h1><a>My Blog</a></h1>
+        </header>
+            {% for post in posts %}
+            <article>
+                <h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+                <img src="{{post.image.url}}" alt="image">
+                <p>{{post.text}}</p>
+            </article>
+            {% endfor %}
+
+    </body>
+</html>

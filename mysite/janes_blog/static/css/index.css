@@ -1,0 +1,12 @@
+h1 a, h2 a {
+    color: green;
+}
+
+p {
+    font-size:1.5vw;
+}
+
+body {
+    max-width: 1200px;
+    margin: auto;
+}
